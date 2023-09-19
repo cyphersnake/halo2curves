@@ -44,6 +44,7 @@ use serde::{Deserialize, Serialize};
 // Montgomery form; i.e., Fr(a) = aR mod r, with R = 2^256.
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "derive_serde", derive(Serialize, Deserialize))]
+#[repr(C)]
 pub struct Fr(pub(crate) [u64; 4]);
 
 /// Constant representing the modulus
